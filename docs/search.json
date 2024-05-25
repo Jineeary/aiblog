@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "김여진",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMay 25, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 22, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMay 25, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n펭귄 프로젝트트\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 22, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 22, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -26,5 +26,26 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/last/index.html",
+    "href": "posts/last/index.html",
+    "title": "펭귄 프로젝트트",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts.\nflowchart LR\n    A[데이터] --&gt;|다운로드| B(데이터프레임)\n    B --&gt;|ggplot| D[시각화]\n    B --&gt;|gt| E[표]\n    B --&gt;|tidymodels| F[fa:fa-car 모형]"
+  },
+  {
+    "objectID": "posts/last/index.html#체중과-물칼퀴-관계",
+    "href": "posts/last/index.html#체중과-물칼퀴-관계",
+    "title": "펭귄 프로젝트트",
+    "section": "체중과 물칼퀴 관계",
+    "text": "체중과 물칼퀴 관계\n\npenguins %&gt;% \n  ggplot(aes (x = flipper_length_mm, y = body_mass_g,\n              color = species)) +\n    geom_point() +\n    facet_wrap(~island)\n\n\n\n\n\n\n\n\n아델리 펭귄은 성격이 좋지 않아서 토르겐섬에 혼자 삶."
+  },
+  {
+    "objectID": "posts/last/index.html#표",
+    "href": "posts/last/index.html#표",
+    "title": "펭귄 프로젝트트",
+    "section": "표",
+    "text": "표\n\n\n\n\n\ninstall.packages(\"gt\")\n\ninstall.packages(\"gtExtras\")\n\nlibrary(gt)\n\nlibrary(gtExtras)\n\npenguins %&gt;%\n  group_by(species) %&gt;%\n  summarise(평균_부리길이 = mean(bill_length_mm),\n            평균_부리깊이 = mean(bill_depth_mm)) %&gt;%\n  \n  gt() %&gt;%\n  fmt_number(\n  columns = c(평균_부리길이, , 평균_부리깊이),\n  decimals = 1,\n  suffixing = FALSE\n  ) %&gt;%\n  gtExtras::gt_theme_nytimes()"
   }
 ]
